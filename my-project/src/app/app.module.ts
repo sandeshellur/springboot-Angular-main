@@ -5,7 +5,7 @@ import { AppComponent } from './app.component';
 import { UserListComponent } from './users-list/user-list.component';
 import { CustomerFormComponent } from './customer-form/customer-form.component';
 import { HttpClientModule } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CustomerServiceService } from './customer-service.service';
 
 @NgModule({

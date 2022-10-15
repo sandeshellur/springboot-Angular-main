@@ -22,6 +22,6 @@ export class CustomerFormComponent {
       }
     
       gotoList() {
-        this.router.navigate(['/customers']);
+        this.router.navigate(['/get']);
       }
 }

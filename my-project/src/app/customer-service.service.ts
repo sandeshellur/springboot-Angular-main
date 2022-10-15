@@ -8,18 +8,16 @@ import { Observable } from 'rxjs';
 })
 export class CustomerServiceService {
 
-  private customersUrl: string;
+  private baseUrl = 'http://localhost:8080/customers';
 
-  constructor(private http: HttpClient) {
-    this.customersUrl = 'http://localhost:8080/customers';
-  }
+  constructor(private http: HttpClient) {}
 
   public findAll(): Observable<Customer[]> {
-    return this.http.get<Customer[]>(this.customersUrl);
+    return this.http.get<Customer[]>(`${this.baseUrl}`+'/users');
   }
 
   public save(customer: Customer):Observable<Object> {
     console.log(customer)
-    return this.http.post<Customer>(this.customersUrl, Customer);
+    return this.http.post(`${this.baseUrl}`+'/add', Customer);
   }
 }

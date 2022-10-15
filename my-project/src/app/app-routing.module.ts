@@ -8,6 +8,7 @@ const routes: Routes = [
   { path: 'addcustomers', component: CustomerFormComponent }
 ];
 
+
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
