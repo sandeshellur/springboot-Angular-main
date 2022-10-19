@@ -18,6 +18,6 @@ export class CustomerServiceService {
 
   public save(customer: Customer):Observable<Object> {
     console.log(customer)
-    return this.http.post(`${this.baseUrl}`+'/add', Customer);
+    return this.http.post(`${this.baseUrl}`+'/add', Customer,{responseType:'text' as 'json'});
   }
 }
